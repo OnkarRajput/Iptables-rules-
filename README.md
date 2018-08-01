@@ -34,7 +34,7 @@ iptables -I INPUT 1 -p tcp --dport 80 -m string --string "cdn.fastclick.net" --a
 
 
 
-###How to mitigate attacks with Iptables###
+###How to mitigate attacks with Iptables
 
 # sync
 iptables -A INPUT -i eth1 -p tcp ! --syn -m state --state NEW  -m limit --limit 5/m --limit-burst 7 -j LOG --log-level 4 --log-prefix "Drop Syn"
