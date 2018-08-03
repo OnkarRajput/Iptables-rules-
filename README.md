@@ -152,3 +152,12 @@ https://cariagiovannib.wordpress.com/2017/08/24/how-to-mitigate-attacks-with-ipt
 
 -A INPUT -p tcp -m tcp --dport 465 -j ACCEPT
  
+ 
+ # Disable/Enable ping response on a Linux machine
+ #sysctl -w net.ipv4.icmp_echo_ignore_all=1
+
+net.ipv4.icmp_echo_ignore_all = 1
+
+#sysctl -w net.ipv4.icmp_echo_ignore_all=0
+
+net.ipv4.icmp_echo_ignore_all = 0
